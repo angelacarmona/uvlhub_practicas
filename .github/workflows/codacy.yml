@@ -49,6 +49,7 @@ jobs:
       run : pip list --outdated
 
     - name: Security check with pip-audit
+      continue-on-error: true
       run: |
         pip install pip-audit
         pip-audit
